@@ -2,8 +2,8 @@
 
 A clean, responsive Task Management UI built with **Angular**, consuming a Spring Boot REST API.
 
-🔗 **Live Demo:** [https://quicktask-manager-app.netlify.app]
-🔗 **Backend Repo:** [https://github.com/itsShubhamGupta/task-management-fe]
+🔗 **Live Demo:** [https://quicktask-manager-app.netlify.app](#)
+🔗 **Backend Repo:** [https://github.com/itsShubhamGupta/task-management-fe](#)
 
 ---
 
