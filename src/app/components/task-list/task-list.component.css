@@ -1,0 +1,105 @@
+.task-grid {
+  height: 500px;
+  width: 100%;
+}
+.task-list-wrapper {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px 24px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.list-header h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.count-pill {
+  background: #eef0ff;
+  color: #3a0ca3;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.empty-state {
+  color: #888;
+  font-size: 0.9rem;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.task-grid {
+  width: 100%;
+}
+
+/* Cell renderer content -- these classes are applied via document.createElement,
+   so they're defined globally-ish here but scoped through ::ng-deep since
+   ag-Grid renders cell content outside Angular's normal view encapsulation. */
+::ng-deep .status-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+::ng-deep .status-pending {
+  background: #fff3cd;
+  color: #946c00;
+}
+
+::ng-deep .status-completed {
+  background: #d4edda;
+  color: #1e7e34;
+}
+
+::ng-deep .actions-cell {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  height: 100%;
+}
+
+::ng-deep .btn-complete,
+::ng-deep .btn-delete {
+  border: none;
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+::ng-deep .btn-complete {
+  background: #38ef7d;
+  color: #064e1c;
+}
+
+::ng-deep .btn-complete:hover {
+  background: #2bd96a;
+}
+
+::ng-deep .btn-delete {
+  background: #ffe0e0;
+  color: #c0392b;
+}
+
+::ng-deep .btn-delete:hover {
+  background: #ffc9c9;
+}
+
+@media (max-width: 600px) {
+  .task-list-wrapper {
+    padding: 16px;
+  }
+}

@@ -1,0 +1,26 @@
+<div class="filters-bar">
+  <div class="search-box">
+    <input
+      type="text"
+      placeholder="Search tasks by name or description..."
+      [(ngModel)]="search"
+      name="search"
+      (ngModelChange)="onChange()"
+    />
+    <button
+      class="clear-btn"
+      type="button"
+      *ngIf="search"
+      (click)="clearSearch()"
+      aria-label="Clear search"
+    >
+      &times;
+    </button>
+  </div>
+
+  <select [(ngModel)]="status" name="status" (ngModelChange)="onChange()">
+    <option value="ALL">All Statuses</option>
+    <option value="PENDING">Pending</option>
+    <option value="COMPLETED">Completed</option>
+  </select>
+</div>

@@ -1,0 +1,42 @@
+  <main class="app-shell">
+    <header class="app-header">
+      <div>
+        <h1>Task Management</h1>
+        <p class="subtitle">Your dashboard for tracking tasks at a glance</p>
+      </div>
+      <button class="btn-add-task" type="button" (click)="openAddTaskModal()">
+        + Add Task
+      </button>
+    </header>
+
+    <!-- <div class="alert alert-offline" *ngIf="isOffline">
+      {{ apiError }}
+    </div>
+
+    <div class="alert alert-error" *ngIf="apiError && !isOffline">
+      {{ apiError }}
+    </div> -->
+
+    
+
+    <!-- Dashboard is the landing section of the page -->
+    <app-dashboard-summary [summary]="summary"></app-dashboard-summary>
+
+    <app-task-filters (filtersChanged)="onFiltersChanged($event)"></app-task-filters>
+
+    <app-task-list
+      [tasks]="filteredTasks"
+      (completeTask)="onCompleteTask($event)"
+      (deleteTask)="onDeleteTask($event)"
+    ></app-task-list>
+
+    <app-modal *ngIf="showAddTaskModal" title="Add New Task" (close)="closeAddTaskModal()">
+      <app-task-form (taskCreated)="onTaskCreated($event)"></app-task-form>
+    </app-modal>
+
+  </main>
+      <app-spinner [show]="(loaderService.loading$ | async) ?? false"></app-spinner>
+    <router-outlet></router-outlet>
+   
+
+

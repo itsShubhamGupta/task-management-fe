@@ -1,0 +1,57 @@
+.task-form {
+  margin-bottom: 0;
+}
+
+.form-row {
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #444;
+}
+
+.required {
+  color: #e63946;
+}
+
+input,
+textarea {
+  border: 1px solid #d6d6d6;
+  border-radius: 6px;
+  padding: 9px 12px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  resize: vertical;
+}
+
+input.invalid {
+  border-color: #e63946;
+}
+
+.error {
+  margin: 0;
+  color: #e63946;
+  font-size: 0.8rem;
+}
+
+.btn-primary {
+  width: 100%;
+  background: #4361ee;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 22px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.btn-primary:hover {
+  background: #3a0ca3;
+}

@@ -1,0 +1,25 @@
+<section class="task-list-wrapper">
+  <div class="list-header">
+    <h2>Tasks</h2>
+    <span class="count-pill">{{ tasks.length }} {{ tasks.length === 1 ? 'task' : 'tasks' }}</span>
+  </div>
+
+  <div class="empty-state" *ngIf="tasks.length === 0">
+    No tasks match your current search/filter.
+  </div>
+
+<ag-grid-angular
+  *ngIf="tasks.length > 0"
+  class="ag-theme-quartz task-grid"
+  [rowData]="tasks"
+  [columnDefs]="colDefs"
+  [defaultColDef]="defaultColDef"
+  [getRowId]="getRowId"
+  [animateRows]="true"
+  [pagination]="true"
+  [paginationPageSize]="10"
+  [paginationPageSizeSelector]="[5, 10, 20, 50]"
+  [domLayout]="'normal'"
+  (gridReady)="onGridReady($event)">
+</ag-grid-angular>
+</section>
