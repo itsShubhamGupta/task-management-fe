@@ -1,27 +1,63 @@
-# Frontend
+# 📋 TaskFlow — Frontend (Angular)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
+A clean, responsive Task Management UI built with **Angular**, consuming a Spring Boot REST API.
 
-## Development server
+🔗 **Live Demo:** [https://quicktask-manager-app.netlify.app]
+🔗 **Backend Repo:** [https://github.com/itsShubhamGupta/task-management-fe]
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+## ✨ Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- ✅ Create, view, complete, and delete tasks
+- 📊 Dashboard summary — Total / Pending / Completed tasks
+- 🔍 Search & filter 
+- 📱 Fully responsive UI
+- ⚠️ Form validation with inline error messages
 
-## Build
+## 🛠️ Tech Stack
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+`Angular` `TypeScript` `RxJS` `HTML5/CSS3` `Netlify`
 
-## Running unit tests
+## 🚀 Getting Started
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+git clone https://github.com/<your-username>/taskflow-frontend.git
+cd taskflow-frontend
+npm install
+ng serve
+```
+App runs at `http://localhost:4200`
 
-## Running end-to-end tests
+## ⚙️ Configuration
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Update the API base URL in `src/environments/environment.ts`:
 
-## Further help
+```ts
+export const environment = {
+  production: false,
+  apiUrl: 'http://localhost:8080/api/tasks'
+};
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## 📁 Project Structure
+
+```
+src/app/
+├── components/
+│   ├── task-list/
+│   ├── task-form/
+│   └── dashboard/
+├── services/
+│   └── task.service.ts
+├── models/
+│   └── task.model.ts
+```
+
+## 🏗️ Build
+
+```bash
+ng build --configuration production
+```
+
+---
